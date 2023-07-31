@@ -6,6 +6,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap');
 
 
+.btn {
+    margin: 10px;
+}
 
 .btn {
     height: 35px;
@@ -96,7 +99,7 @@
 
 .btn-5 {
     border: 2px solid #4f74e3;
-    background: radial-gradient(ellipse at top,#17A9FD,#4f74e3);
+    background: radial-gradient(ellipse at top, #17A9FD, #4f74e3);
     color: #fff;
     font-size: 15px;
     font-weight: 550;
