@@ -13,6 +13,7 @@
     height: 400px;
     width: 800px;
     margin-top: 20vh;
+    border-radius: 20px;
 }
 
 /* .left{
@@ -22,12 +23,15 @@
     border: 1px solid transparent;
     height: 398px;
     width: 400px;
+    border-radius: 20px 0 0 20px;
 }
 
 .right {
     /* background: red; */
     height: 400px;
     width: 800px;
+    background: linear-gradient(45deg, #ffc3c3, #d8ffdd, #c5c5ff, #ffc3c3);
+    border-radius: 0 20px 20px 0;
 }
 
 .right h5 {
