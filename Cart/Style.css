@@ -1,0 +1,45 @@
+.conteainer{
+    display: table;
+    margin-left: 60vh;
+    border: 2px solid #4f74e3;
+    padding: 50px;
+    padding-top: 30px;
+    margin-top: 50px;
+    background: linear-gradient(45deg,#ffdada,#d4d4ff, #ffe8ed,#cdffcd);
+}
+.conteainer h1{
+    font-size: 50px;
+    font-weight: 600;
+    color: #7d9cf9;
+}
+.conteainer form{
+    display: grid;
+}
+.conteainer input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #f74914;
+    border-radius: 5px;
+    padding: 12px 15px;
+    font-size: 15px;
+}
+.conteainer input[type="button"]{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 15vh;
+    cursor: pointer;
+    left: 0;
+}
+.conteainer input[type="button"]:hover{
+    border: 1.5px solid #f74914;
+    background-color: #fff;
+    color: #000;
+}
+.conteainer textarea{
+    border: 1px solid #f74914;
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-size: 15px;
+    resize: none;
+}
