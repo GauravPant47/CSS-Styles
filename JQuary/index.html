@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Text Animations with jQuery</title>
+</head>
+<style>
+    .animation-container {
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    h1 {
+        display: none;
+        /* Hide the text initially */
+    }
+</style>
+
+<body>
+    <div class="animation-container">
+        <h1 id="fade-in-text">Hello, World!</h1>
+        <h1 id="slide-in-text">Welcome to Text Animations</h1>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+<script>
+    $(document).ready(function () {
+        // Fade-in Animation
+        $("#fade-in-text").fadeIn(2000); // 1500ms (1.5 seconds) duration for the fade-in effect
+
+        // Slide-in Animation
+        $("#slide-in-text").animate({
+            marginLeft: "0", // Slide in from the left. You can also use "right", "top", or "bottom"
+            opacity: "1"     // Make the text fully visible after sliding in
+        }, 1000); // 1000ms (1 second) duration for the slide-in effect
+    });
+
+</script>
+
+</html>
