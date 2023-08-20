@@ -1,56 +1,53 @@
-body {
+/* Reset default margin and padding */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
 }
 
-.container-footer {
-    /* max-width: 1200px; */
-    margin: 0 auto;
-    padding: 60px;
-}
-
-footer {
-    /* background-color: #333; */
-    color: #fff;
+.content {
     padding: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.left-side ul,
-.right-side ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.left-side ul li,
-.right-side ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.left-side ul li:last-child,
-.right-side ul li:last-child {
-    margin-right: 0;
-}
-
-.left-side ul li a,
-.right-side ul li a {
-    color: #000000;
-    text-decoration: none;
-}
-
-.middle-side {
     text-align: center;
 }
 
-.middle-side p {
-    margin: 5px 0;
-    color: #000000;
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-.right-side ul {
-    text-align: right;
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left, .middle, .right {
+    flex: 1;
+    padding: 10px;
+}
+
+.left p, .middle p {
+    margin: 5px 0;
+}
+
+.right a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
 }
