@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.slider-container {
+    overflow-x: scroll;
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    scroll-snap-type: x mandatory;
+}
+
+.slider {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    animation: scrollAnimation 100s linear infinite;
+    padding: 10px;
+}
+
+.card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+    display: flex;
+}
+
+.card img {
+    padding: 10px;
+    width: 400px;
+    height: 400px;
+    display: flex;
+}
+
+@keyframes scrollAnimation {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-100%);
+    }
+
+    40% {
+        transform: translateX(-200%);
+    }
+
+    60% {
+        transform: translateX(-300%);
+    }
+
+    80% {
+        transform: translateX(-400%);
+    }
+}
