@@ -1,18 +1,28 @@
 body {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     margin: 0;
     background-color: #f0f0f0;
 }
 
-.colorful-text {
+.colorful-t1 {
     font-size: 2em;
     font-weight: bold;
     display: inline-block;
     background-image: linear-gradient(to left,
             #FF0000, #FF9900, #FFFF00, #33FF00, #0099FF, #9900FF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.colorful-t2 {
+    font-size: 2em;
+    font-weight: bold;
+    display: inline-block;
+    background-image: linear-gradient(to left,
+            #0d00ff, #2fff00, #ff0000, #00ffff, #ff00f7, #eeff00);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
