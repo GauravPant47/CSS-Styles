@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    background: rgb(240, 240, 240);
+}
+.color-r{
+    color: rgb(255, 0, 0);
+}
+.color-g{
+    color: green;
+}
+.color-b{
+    color: blue;
+}
+.color-p{
+    color: rgb(255, 0, 230);
+}
+.color-b1{
+    color: rgb(38, 65, 115);
+}
+.color-br{
+    color: saddlebrown;
+}
+.color-pr{
+    color: chartreuse;
+}
