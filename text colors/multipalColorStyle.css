@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.colorful-text {
+    font-size: 2em;
+    font-weight: bold;
+    display: inline-block;
+    background-image: linear-gradient(to left,
+            #FF0000, #FF9900, #FFFF00, #33FF00, #0099FF, #9900FF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
