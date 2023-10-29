@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country, District, and City Selector</title>
+    <style>
+        select {
+            width: 200px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="country">Select Country:</label>
+    <select id="country">
+        <option value="usa">USA</option>
+        <option value="india">India</option>
+    </select>
+
+    <label for="district">Select District:</label>
+    <select id="district">
+        <option value="ny">Manhattan</option>
+        <option value="ca">Brooklyn</option>
+        <option value="TheBronx">The Bronx</option>
+        <option value="qc">Queens</option>
+    </select>
+
+    <label for="city">Select City:</label>
+    <select id="city">
+        <option value="nyc">New York City</option>
+        <option value="la">Los Angeles</option>
+        <option value="tor">Toronto</option>
+        <option value="mtl">Montreal</option>
+    </select>
+
+    <script>
+        // JavaScript to handle dynamic population of selectors
+        const countrySelector = document.getElementById('country');
+        const districtSelector = document.getElementById('district');
+        const citySelector = document.getElementById('city');
+
+        // Data mapping (replace with your actual data source)
+        const districtData = {
+            "usa": ["Manhattan", "Brooklyn", "The Bronx", "Queens", "Staten Island", "Los Angeles County", "San Francisco County"],
+            "india": ["New Delhi", "South Delhi", "North Delhi", "East Delhi", "West Delhi","Mumbai", "Pune"],
+            
+        };
+
+        const cityData = {
+            Manhattan: ['nyc'],
+            Brooklyn: ['la'],
+            TheBronx: ['tor'],
+            Queens: ['mtl']
+        };
+
+        // Function to populate the district selector
+        function populateDistricts() {
+            const selectedCountry = countrySelector.value;
+            districtSelector.innerHTML = '';
+
+            if (selectedCountry in districtData) {
+                districtData[selectedCountry].forEach((district) => {
+                    const option = document.createElement('option');
+                    option.value = district;
+                    option.textContent = district;
+                    districtSelector.appendChild(option);
+                });
+            }
+        }
+
+        // Function to populate the city selector
+        function populateCities() {
+            const selectedDistrict = districtSelector.value;
+            citySelector.innerHTML = '';
+
+            if (selectedDistrict in cityData) {
+                cityData[selectedDistrict].forEach((city) => {
+                    const option = document.createElement('option');
+                    option.value = city;
+                    option.textContent = city;
+                    citySelector.appendChild(option);
+                });
+            }
+        }
+
+        // Event listeners to update selectors
+        countrySelector.addEventListener('change', populateDistricts);
+        districtSelector.addEventListener('change', populateCities);
+
+        // Initial population of district and city selectors
+        populateDistricts();
+        populateCities();
+    </script>
+</body>
+
+</html>
