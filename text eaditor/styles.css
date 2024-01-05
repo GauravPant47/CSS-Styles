@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap');
+
+
+
 * {
     padding: 0;
     margin: 0;
@@ -27,58 +36,58 @@ body {
     gap: 15px;
 }
 
-button {
-    height: 28px;
-    width: 28px;
-    display: grid;
-    place-items: center;
-    border-radius: 3px;
-    border: none;
-    background-color: #ffffff;
-    outline: none;
-    color: #020929;
+#text-input-qns {
+    margin-top: 10px;
+    border: 1px solid #dddddd;
+    padding: 10px;
+    /* width: 82vh; */
+    height: 5vh;
+    resize: none;
 }
 
-select {
-    padding: 7px;
-    border: 1px solid #020929;
-    border-radius: 3px;
-}
-
-.options label,
-.options select {
-    font-family: "Poppins", sans-serif;
-}
-
-.input-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-input[type="color"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: transparent;
-    width: 40px;
-    height: 28px;
-    border: none;
-    cursor: pointer;
-}
-
-input[type="color"]::-webkit-color-swatch {
-    border-radius: 15px;
-    box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #020929;
-}
-
-input[type="color"]::-moz-color-swatch {
-    border-radius: 15px;
-    box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #020929;
-}
-#text-input{
+#text-input {
     margin-top: 10px;
     border: 1px solid #dddddd;
     padding: 20px;
+    /* width: 82vh; */
     height: 50vh;
+    resize: none;
+}
+
+/* button */
+.btn {
+    margin: 10px;
+}
+
+.btn {
+    height: 35px;
+    width: 120px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    border: 1.3px solid #000;
+}
+
+.btn-1 {
+    border: 2px solid #17A9FD;
+    background-color: #17A9FD;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 550;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    transition: 2s;
+    z-index: 1;
+}
+
+.btn:hover {
+    height: 37px;
+    width: 122px;
+}
+
+.btn-1:hover {
+    border: 1.5px solid #17A9FD;
+    background-color: #fff;
+    color: #000;
 }
