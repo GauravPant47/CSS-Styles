@@ -6,20 +6,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CKEditor </title>
         <script src="./ckeditor.js"></script>
+        <link rel="stylesheet" href="../styles.css">
+        <script src="./script.js"></script>
+        <script src="./button.js"></script>
 
 </head>
 
 <body>
-        <div id="editor">This is some sample content.</div>
+        
+        <div class="container">
+                <input type="button" class="btn btn-1" value="Submit">
+        </div>
+
+        <div class="container">
+                <div id="text-input-qns" contenteditable="true"></div>
+                <input type="button" class="btn btn-1" value="Submit">
+        </div>
         <script>
                 ClassicEditor
-                        .create(document.querySelector('#editor'))
+                        .create(document.querySelector('#text-input-qns'))
                         .then(editor => {
                                 console.log(editor);
                         })
                         .catch(error => {
                                 console.error(error);
                         });
+
         </script>
 </body>
 
