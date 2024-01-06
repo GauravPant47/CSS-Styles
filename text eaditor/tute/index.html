@@ -13,18 +13,18 @@
 </head>
 
 <body>
-        
-        <div class="container">
-                <input type="button" class="btn btn-1" value="Submit">
-        </div>
+
 
         <div class="container">
-                <div id="text-input-qns" contenteditable="true"></div>
-                <input type="button" class="btn btn-1" value="Submit">
+                <label for="">Questions : </label>
+                <input type="text" form="" id="text-input-qns">
+                <label for="">Answer :</label>
+                <textarea name="" id="text-input-ans"></textarea>
+                <button class="btn btn-1">Submit</button>
         </div>
         <script>
                 ClassicEditor
-                        .create(document.querySelector('#text-input-qns'))
+                        .create(document.querySelector('#text-input-ans'))
                         .then(editor => {
                                 console.log(editor);
                         })
