@@ -13,14 +13,16 @@
 </head>
 
 <body>
-
-
         <div class="container">
-                <label for="">Questions : </label>
-                <input type="text" form="" id="text-input-qns">
-                <label for="">Answer :</label>
-                <textarea name="" id="text-input-ans"></textarea>
-                <button class="btn btn-1">Submit</button>
+                <form th:action="@{/postJava}" method="post" th:object="${javaResponceList}">
+                        <div th:each="javaResponce : ${javaResponceList}">
+                                <label for="">Questions : </label>
+                                <input type="text" form="" id="text-input-qns" th:field="*{qns}" />
+                                <label for="">Answer :</label>
+                                <textarea name="" id="text-input-ans" th:field="*{ans}"></textarea>
+                        </div>
+                        <button class="btn btn-1">Submit</button>
+                </form>
         </div>
         <script>
                 ClassicEditor
