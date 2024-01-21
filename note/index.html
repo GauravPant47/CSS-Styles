@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Notepad Application</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./dark-mode.css.css" id="dark-mode-stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+</head>
+
+<body>
+    <h2>Create Note</h2>
+
+    <form action="#" th:action="@{/notes/save}" th:object="${note}" method="post">
+        <label>Title: <input type="text" th:field="*{title}" /></label><br />
+        <label>Content: <textarea th:field="*{content}"></textarea></label><br />
+        <input type="submit" value="Save" />
+    </form>
+
+    <h2>Notes</h2>
+
+    <div th:each="note : ${notes}">
+        <div class="note">
+            <p><strong>ID:</strong> <span th:text="${note.id}"></span></p>
+            <p><strong>Title:</strong> <span th:text="${note.title}"></span></p>
+            <p><strong>Content:</strong> <span th:text="${note.content}"></span></p>
+            <p><a th:href="@{'/notes/delete/' + ${note.id}}" onclick="return confirm('Are you sure?')">Delete</a></p>
+        </div>
+    </div>
+
+    <!-- Add pagination links at the bottom of the notes -->
+    <div th:if="${totalPages > 1}">
+        <div>
+            <span>Pages:</span>
+            <span th:each="pageNumber : ${#numbers.sequence(0, totalPages - 1)}">
+                <a th:href="@{'/notes/all?page=' + ${pageNumber}}"
+                    th:class="${pageNumber == currentPage ? 'active' : ''}" th:text="${pageNumber + 1}"></a>
+            </span>
+        </div>
+    </div>
+</body>
+
+</html>
