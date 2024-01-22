@@ -250,7 +250,7 @@ RTE_DefaultConfig.svgCode_pastetext = '<svg viewBox="-2 -2 20 20" fill="#5F6368"
 RTE_DefaultConfig.svgCode_pasteword = '<svg viewBox="-3 -3 24 24" fill="#5F6368"><g fill="none" fill-rule="evenodd"><path fill="#4285F4" fill-rule="nonzero" d="M16 0H2C.9 0 0 .9 0 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zm-3.5 14H11L9 6.5 7 14H5.5L3.1 4h1.7l1.54 7.51L8.3 4h1.4l1.97 7.51L13.2 4h1.7l-2.4 10z"/><path d="M-3-3h24v24H-3V-3zm0 0h24v24H-3V-3z"/></svg>';
 RTE_DefaultConfig.svgCode_pasteauto = RTE_DefaultConfig.svgCode_paste;
 
-RTE_DefaultConfig.svgCode_save = '<svg viewBox="-2 -2 36 36" fill="#5F6368"><path d="M27.71,9.29l-5-5A1,1,0,0,0,22,4H6A2,2,0,0,0,4,6V26a2,2,0,0,0,2,2H26a2,2,0,0,0,2-2V10A1,1,0,0,0,27.71,9.29ZM12,6h8v4H12Zm8,20H12V18h8Zm2,0V18a2,2,0,0,0-2-2H12a2,2,0,0,0-2,2v8H6V6h4v4a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V6.41l4,4V26Z"/></svg>';
+
 RTE_DefaultConfig.svgCode_load = '<svg  viewBox="-2 -2 20 20"><g><path fill="#f6f6f6" d="M16 1H3v5H0v9h13v-5h3z"/></g><g id="icon_x5F_bg"><path fill="none" d="M11 8H2v5h9V8zm-2 3H4v-1h5v1z"/><path fill="#424242" d="M4 10h5v1H4zM4 2v4h1V3h9v5h-1v1h2V2z"/><path fill="#424242" d="M1 14h11V7H1v7zm1-6h9v5H2V8zM7 5h5v1H7z"/></g><g id="icon_x5F_fg"><path fill="none" d="M4 10h5v1H4z"/><path fill="#f0eff1" d="M5 3v3h2V5h5v1h1v2h1V3zM2 13h9V8H2v5zm2-3h5v1H4v-1z"/></g></svg>';
 
 RTE_DefaultConfig.svgCode_fontname = '<svg viewBox="-2 -2 20 20" fill="#5F6368"><path d="M5,6h1L4,1H3L1,6h1l0.4-1h2.2L5,6z M2.8,4l0.7-1.8L4.2,4H2.8z M15,15H5v-1h10V15z M14.4,12.8c-0.2,0-0.4-0.2-0.4-0.4V5h-0.3L7,11.7c0,0-1,1-1.5,1V13H8v-0.3H7.6c-0.2,0-0.5-0.4,0.2-1L9,10.5h3v1.9c0,0.2-0.2,0.4-0.4,0.4c0,0,0,0,0,0h-0.4V13h3.5v-0.3H14.4z M9.5,10L12,7.5V10H9.5z M2.4,12.4l-0.7-0.7l10-10l0.7,0.7L2.4,12.4z"/></svg>';

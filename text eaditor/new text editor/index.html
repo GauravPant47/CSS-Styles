@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <!--  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&family=Montserrat:wght@400;700&family=Oswald:wght@400;700&family=Lato:wght@400;700&family=Raleway:wght@400;700&family=Poppins:wght@400;700&family=Ubuntu:wght@400;700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Source+Sans+Pro:wght@400;700&family=Quicksand:wght@400;700&family=Noto+Sans:wght@400;700&family=Pacifico&family=Architects+Daughter&family=Indie+Flower&family=Kaushan+Script&family=Great+Vibes&family=Dancing+Script:wght@400;700&family=Courgette&family=Amatic+SC:wght@400;700"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- scripts -->
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <div class="toolbar">
+        <button onclick="changeFontSize('increase')"><i class="fas fa-plus"></i></button>
+        <button onclick="changeFontSize('decrease')"><i class="fas fa-minus"></i></button>
+        <button onclick="createList('bullet')"><i class="fas fa-list-ul"></i></button>
+        <button onclick="createList('number')"><i class="fas fa-list-ol"></i></button>
+        <button onclick="setTextFormat('bold')"><i class="fas fa-bold"></i></button>
+        <button onclick="setTextFormat('italic')"><i class="fas fa-italic"></i></button>
+        <button onclick="setTextFormat('underline')"><i class="fas fa-underline"></i></button>
+
+        <select id="fontFamilyDropdown" onchange="changeFontFamily(event)">
+            <option value="">Font Style</option>
+            <option value="'Open Sans', sans-serif">Open Sans</option>
+            <option value="'Roboto', sans-serif">Roboto</option>
+            <option value="'Montserrat', sans-serif">Montserrat</option>
+            <option value="'Oswald', sans-serif">Oswald</option>
+            <option value="'Lato', sans-serif">Lato</option>
+            <option value="'Raleway', sans-serif">Raleway</option>
+            <option value="'Poppins', sans-serif">Poppins</option>
+            <option value="'Ubuntu', sans-serif">Ubuntu</option>
+            <option value="'Merriweather', serif">Merriweather</option>
+            <option value="'Playfair Display', serif">Playfair Display</option>
+            <option value="'Roboto Condensed', sans-serif">Roboto Condensed</option>
+            <option value="'Source Sans Pro', sans-serif">Source Sans Pro</option>
+            <option value="'Quicksand', sans-serif">Quicksand</option>
+            <option value="'Noto Sans', sans-serif">Noto Sans</option>
+            <option value="'Pacifico', cursive">Pacifico</option>
+            <option value="'Architects Daughter', cursive">Architects Daughter</option>
+            <option value="'Indie Flower', cursive">Indie Flower</option>
+            <option value="'Kaushan Script', cursive">Kaushan Script</option>
+            <option value="'Great Vibes', cursive">Great Vibes</option>
+            <option value="'Dancing Script', cursive">Dancing Script</option>
+            <option value="'Courgette', cursive">Courgette</option>
+            <option value="'Amatic SC', cursive">Amatic SC</option>
+        </select>
+        <div class="highlight-dropdown">
+            <i class="fas fa-paint-brush"></i>
+            <div class="highlight-dropdown-content">
+                <button class="highlight red" onclick="highlightText('red')">Red</button>
+                <button class="highlight green" onclick="highlightText('green')">Parrot Green</button>
+                <button class="highlight blue" onclick="highlightText('blue')">Blue</button>
+                <button class="highlight sky-blue" onclick="highlightText('sky-blue')">Sky Blue</button>
+                <button class="highlight yellow" onclick="highlightText('yellow')">Yellow</button>
+                <button class="highlight light-green" onclick="highlightText('light-green')">Light Green</button>
+                <button class="highlight pink" onclick="highlightText('pink')">Pink</button>
+            </div>
+        </div>
+        <label for="colorPicker" class="color-picker-icon" onclick="showColorBoard()"><i
+                class="fas fa-paint-roller"></i></label>
+        <div class="color-board" id="colorBoard">
+            <div class="color-row">
+                <div class="color-cell" style="background-color: #e74c3c;" onclick="changeTextColor('#e74c3c')"></div>
+                <div class="color-cell" style="background-color: #e67e22;" onclick="changeTextColor('#e67e22')"></div>
+                <div class="color-cell" style="background-color: #f1c40f;" onclick="changeTextColor('#f1c40f')"></div>
+                <div class="color-cell" style="background-color: #2ecc71;" onclick="changeTextColor('#2ecc71')"></div>
+            </div>
+            <div class="color-row">
+                <div class="color-cell" style="background-color: #3498db;" onclick="changeTextColor('#3498db')"></div>
+                <div class="color-cell" style="background-color: #9b59b6;" onclick="changeTextColor('#9b59b6')"></div>
+                <div class="color-cell" style="background-color: #1abc9c;" onclick="changeTextColor('#1abc9c')"></div>
+                <div class="color-cell" style="background-color: #34495e;" onclick="changeTextColor('#34495e')"></div>
+            </div>
+            <div class="color-row">
+                <div class="color-cell" style="background-color: #ecf0f1;" onclick="changeTextColor('#ecf0f1')"></div>
+                <div class="color-cell" style="background-color: #95a5a6;" onclick="changeTextColor('#95a5a6')"></div>
+                <div class="color-cell" style="background-color: #bdc3c7;" onclick="changeTextColor('#bdc3c7')"></div>
+                <div class="color-cell" style="background-color: #7f8c8d;" onclick="changeTextColor('#7f8c8d')"></div>
+            </div>
+            <div class="color-row">
+                <div class="color-cell no-color" onclick="changeTextColor('none')">No Color</div>
+            </div>
+        </div>
+        <label for="imageUploader" class="fas fa-image"></label>
+        <input type="file" id="imageUploader" accept="image/*" onchange="insertImage(event)">
+        <button onclick="setTextAlignment('left')"><i class="fas fa-align-left"></i></button>
+        <button onclick="setTextAlignment('center')"><i class="fas fa-align-center"></i></button>
+        <button onclick="setTextAlignment('right')"><i class="fas fa-align-right"></i></button>
+        <button onclick="addLink()"><i class="fas fa-link"></i></button>
+        <button onclick="clearFormatting()"><i class="fas fa-eraser"></i></button>
+    </div>
+    <div id="editor" contenteditable="true"></div>
+</body>
+
+</html>
