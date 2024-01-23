@@ -1,10 +1,12 @@
+// script.js
+
 function changeFontSize(action) {
     const editor = document.getElementById('editor');
     let currentSize = parseFloat(window.getComputedStyle(editor, null).getPropertyValue('font-size'));
-    if (action === 'increase' && currentSize < 30) {
-        editor.style.fontSize = `${currentSize + 2}px`;
-    } else if (action === 'decrease' && currentSize > 10) {
-        editor.style.fontSize = `${currentSize - 2}px`;
+    if (action === 'increase') {
+        editor.style.fontSize = (currentSize + 2) + 'px';
+    } else if (action === 'decrease') {
+        editor.style.fontSize = (currentSize - 2) + 'px';
     }
 }
 
@@ -31,7 +33,7 @@ function highlightText(color) {
 }
 
 function setTextAlignment(align) {
-    document.execCommand(`justify${align}`, false, null);
+    document.execCommand('justify' + align, false, null);
 }
 
 function addLink() {
@@ -47,15 +49,7 @@ function showColorBoard() {
 }
 
 function changeTextColor(color) {
-    // Change the color of the headline (replace 'headline' with the actual ID or class of your headline element)
-    const headline = document.getElementById('headline');
-    if (headline) {
-        headline.style.color = color;
-    }
-
-    // Change the color of the text editor
-    const editor = document.getElementById('editor');
-    editor.focus();
+    document.getElementById('editor').focus();
     document.execCommand('foreColor', false, color);
     showColorBoard();
 }
