@@ -34,13 +34,22 @@
         <a href="/mysql">Mysql</a>
         <a href="/mongoDb">MongoDb</a>
         <a href="/springboot">Spring Boot</a>
+
+        <div class="swipe-container">
+            <label class="switch">
+                <input type="checkbox" id="mode-switch" onclick="toggleDarkMode()">
+                <span class="slider"></span>
+            </label>
+        </div>
     </div>
 
     <div class="main-content" id="main-content">
         <button class="open-button" onclick="toggleMenu()">☰</button>
-        <div>
-            <h1>Welcome to Your Website</h1>
-            <p>This is some sample content. Replace it with your actual content.</p>
+        <div id="wight_color">
+            <form id="editForm" method="post" th:action="@{/notepad/file/{fileName}(fileName=${file.fileName})}">
+                <textarea name="content" id="content" class="text-input-ans" th:text="${file.content}"></textarea>
+                <br>
+            </form>
         </div>
 
         </ul>

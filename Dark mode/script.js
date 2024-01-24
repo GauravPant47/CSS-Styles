@@ -19,7 +19,6 @@ function toggleDarkMode() {
         modeSwitch.style.backgroundColor = '#3498db';
         colorChange.style.color='#000';
     }
-
     // Update the switch state
     modeSwitch.checked = darkMode;
 }
