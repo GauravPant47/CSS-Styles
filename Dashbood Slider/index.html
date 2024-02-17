@@ -11,9 +11,23 @@
 
 
 <body>
+    <div class="menu" id="menu">
+        <a href="/java">Java</a>
+        <a href="/mysql">Mysql</a>
+        <a href="/mongoDb">MongoDb</a>
+        <a href="/springboot">Spring Boot</a>
+
+        <div class="swipe-container">
+            <label class="switch">
+                <input type="checkbox" id="mode-switch" onclick="toggleDarkMode()">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
     <!-- Navbar content -->
     <header>
         <nav class="navbar">
+            <button class="open-button" onclick="toggleMenu()">☰</button>
             <div class="logo">Logo</div>
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
@@ -28,31 +42,31 @@
             </div>
         </nav>
     </header>
-
-    <div class="menu" id="menu">
-        <a href="/java">Java</a>
-        <a href="/mysql">Mysql</a>
-        <a href="/mongoDb">MongoDb</a>
-        <a href="/springboot">Spring Boot</a>
-
-        <div class="swipe-container">
-            <label class="switch">
-                <input type="checkbox" id="mode-switch" onclick="toggleDarkMode()">
-                <span class="slider"></span>
-            </label>
-        </div>
-    </div>
-
     <div class="main-content" id="main-content">
-        <button class="open-button" onclick="toggleMenu()">☰</button>
-        <div id="wight_color">
-            <form id="editForm" method="post" th:action="@{/notepad/file/{fileName}(fileName=${file.fileName})}">
-                <textarea name="content" id="content" class="text-input-ans" th:text="${file.content}"></textarea>
-                <br>
-            </form>
-        </div>
+        <h1>Fixed Top Menu</h1>
+        <h2>Scroll this page to see the effect</h2>
+        <h2>The navigation bar will stay at the top of the page while scrolling</h2>
 
-        </ul>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
     </div>
 
     <!-- Footer -->
