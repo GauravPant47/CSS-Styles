@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Website</title>
+    <script src="./script.js"></script>
+    <style>
+        /* Move your CSS to an external stylesheet */
+        .footer {
+            display: flex;
+            align-items: center;
+            /* justify-content: space-between; */
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: skyblue;
+            color: black;
+            height: 20px;
+        }
+
+        .footer span {
+            /* position: fixed;
+            right: 0;
+            padding: 0px 50px 0px; */
+            margin-right: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Your website content goes here -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Version: <span th:text="${version}"></span></p>
+        <!-- <p>&copy; All Rights Reserved</p> -->
+        <span id="date"></span>
+        <span id="time"></span>
+    </footer>
+</body>
+
+</html>

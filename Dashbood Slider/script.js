@@ -24,31 +24,32 @@ function toggleMenu() {
 
 // Dark mode
 // Function to toggle dark mode
+// Function to toggle dark mode
 function toggleDarkMode() {
+    const body = document.body;
     const navbar = document.querySelector('.navbar');
     const menu = document.getElementById('menu');
     const form = document.getElementById('editForm');
 
-
-    const body = document.body;
     body.classList.toggle("dark-mode");
     navbar.classList.toggle('dark-mode-nav');
     menu.classList.toggle('dark-mode-menu');
     form.classList.toggle('dark-mode-form');
-    
-    // You can also save the user's preference in localStorage for persistence
+
+    // Save dark mode state in localStorage
     const isDarkMode = body.classList.contains("dark-mode");
     localStorage.setItem("darkMode", isDarkMode);
-    const isDarkModeNavbar = navbar.classList.contains('dark-mode-nav');
-    localStorage.setItem('darkModeNavbar', isDarkModeNavbar);
-    const isDarkModeForm = form.classList.contains('dark-mode-form');
-    localStorage.setItem('darkModeForm', isDarkModeForm);
+}
+
+// New function to initialize dark mode based on localStorage
+function initializeDarkMode() {
+    const isDarkModeStored = localStorage.getItem("darkMode");
+
+    // Apply dark mode if the preference is true
+    if (isDarkModeStored === "true") {
+        toggleDarkMode();
+    }
 }
 
 // Check if dark mode preference is stored in localStorage
-const isDarkModeStored = localStorage.getItem("darkMode");
-
-// Apply dark mode if the preference is true
-if (isDarkModeStored === "true") {
-    toggleDarkMode();
-}
+initializeDarkMode();
